@@ -17,5 +17,9 @@ vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open float
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
 -- Moje dodatkowe - centrowanie
-vim.keymap.set('n', 'n','nzz', opts)
-vim.keymap.set('n', 'N','Nzz', opts)
+vim.keymap.set('n', 'n','nzz')
+vim.keymap.set('n', 'N','Nzz')
+vim.keymap.set('n', '{', '{zz')
+vim.keymap.set('n', '}', '}zz')
+vim.keymap.set('n', '<C-D>', '<C-D>zz')
+vim.keymap.set('n', '<C-U>', '<C-U>zz')
