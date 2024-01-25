@@ -1,4 +1,3 @@
-
 local M = {
 	'nvim-tree/nvim-tree.lua',
 	opts = {
@@ -6,7 +5,7 @@ local M = {
 			sorter = "case_sensitive",
 		},
 		view = {
-			width = 30,
+			width = 40,
 		},
 		renderer = {
 			group_empty = true,
