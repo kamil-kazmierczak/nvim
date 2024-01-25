@@ -19,7 +19,7 @@ local M = {
 			files_first = false,
 		},
 		view = {
-			centralize_selection = false,
+			centralize_selection = true,
 			cursorline = true,
 			debounce_delay = 15,
 			side = "left",
@@ -27,7 +27,7 @@ local M = {
 			number = false,
 			relativenumber = false,
 			signcolumn = "yes",
-			width = 50,
+			width = 30,
 			float = {
 				enable = false,
 				quit_on_focus_loss = true,
@@ -69,11 +69,11 @@ local M = {
 			icons = {
 				web_devicons = {
 					file = {
-						enable = true,
+						enable = false,
 						color = true,
 					},
 					folder = {
-						enable = true,
+						enable = false,
 						color = true,
 					},
 				},
@@ -163,7 +163,7 @@ local M = {
 		},
 		filters = {
 			git_ignored = false,
-			dotfiles = false,
+			dotfiles = true,
 			git_clean = false,
 			no_buffer = false,
 			no_bookmark = false,
