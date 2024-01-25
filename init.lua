@@ -1,18 +1,18 @@
-require 'user.launch'
-require 'user.options'
-require 'user.keymaps'
-require 'user.autocmds'
-spec 'user.colorscheme'
-spec 'user.lualine'
-spec 'user.cmp'
-spec 'user.comment'
-spec 'user.treesitter'
-spec 'user.whichkey'
-spec 'user.lspconfig'
-spec 'user.ibl'
-spec 'user.vim-fugitive'
-spec 'user.vim-rhubarb'
-spec 'user.vim-be-good'
-spec 'user.telescope'
-spec 'user.gitsigns'
-require 'user.lazy'
+require('user.launch')
+require('user.options')
+require('user.keymaps')
+require('user.autocmds')
+spec('user.colorscheme')
+spec('user.lualine')
+spec('user.cmp')
+spec('user.comment')
+spec('user.treesitter')
+spec('user.whichkey')
+spec('user.lspconfig')
+spec('user.ibl')
+spec('user.vim-fugitive')
+spec('user.vim-rhubarb')
+spec('user.vim-be-good')
+spec('user.telescope')
+spec('user.gitsigns')
+require('user.lazy')
