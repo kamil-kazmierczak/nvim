@@ -163,7 +163,7 @@ local M = {
 		},
 		filters = {
 			git_ignored = false,
-			dotfiles = true,
+			dotfiles = false,
 			git_clean = false,
 			no_buffer = false,
 			no_bookmark = false,
