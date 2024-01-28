@@ -17,8 +17,6 @@ local M = {
 }
 
 function M.config()
-	-- [[ Configure LSP ]]
-	--  This function gets run when an LSP connects to a particular buffer.
 	local on_attach = function(_, bufnr)
 		-- NOTE: Remember that lua is a real programming language, and as such it is possible
 		-- to define small helper and utility functions so you don't have to repeat yourself
@@ -38,9 +36,9 @@ function M.config()
 		nmap('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
 
 		nmap('gd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinition')
+		nmap('gtd', require('telescope.builtin').lsp_type_definitions, '[G]oto [T]ype [D]efinition')
 		nmap('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
 		nmap('gI', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
-		nmap('<leader>D', require('telescope.builtin').lsp_type_definitions, 'Type [D]efinition')
 		nmap('<leader>ds', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
 		nmap('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
 
@@ -55,11 +53,6 @@ function M.config()
 		nmap('<leader>wl', function()
 			print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
 		end, '[W]orkspace [L]ist Folders')
-
-		-- Create a command `:Format` local to the LSP buffer
-		vim.api.nvim_buf_create_user_command(bufnr, 'Format', function(_)
-			vim.lsp.buf.format()
-		end, { desc = 'Format current buffer with LSP' })
 	end
 
 	-- document existing key chains
@@ -94,13 +87,7 @@ function M.config()
 	--  If you want to override the default filetypes that your language server will attach to you can
 	--  define the property 'filetypes' to the map in question.
 	local servers = {
-		-- clangd = {},
-		-- gopls = {},
-		-- pyright = {},
-		-- rust_analyzer = {},
-		-- tsserver = {},
-		-- html = { filetypes = { 'html', 'twig', 'hbs'} },
-
+		gopls = {},
 		lua_ls = {
 			Lua = {
 				workspace = { checkThirdParty = false },

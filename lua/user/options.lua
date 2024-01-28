@@ -1,21 +1,15 @@
 vim.g.mapleader = ' '
 vim.g.mapleaderlocal = ' '
 vim.o.hlsearch = false
+vim.o.wrap = false
 
+vim.o.scrolloff = 8
 -- Make line numbers default
 vim.wo.number = true
 vim.wo.relativenumber = true
 
--- Enable mouse mode
-vim.o.mouse = 'a'
-
--- Sync clipboard between OS and Neovim.
---  Remove this option if you want your OS clipboard to remain independent.
---  See `:help 'clipboard'`
-vim.o.clipboard = 'unnamedplus'
-
 -- Enable break indent
-vim.o.breakindent = true
+vim.o.smartindent = true
 
 -- Save undo history
 vim.o.undofile = true
@@ -39,6 +33,8 @@ vim.o.termguicolors = true
 
 vim.o.shiftwidth = 4
 vim.o.tabstop = 4
+vim.opt.swapfile = false
+
 
 -- For using Nvim tree
 vim.g.loaded_netrw = 1
