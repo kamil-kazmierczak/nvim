@@ -17,8 +17,8 @@ local M = {
 
 		styles = {
 			bold = true,
-			italic = false,
-			transparency = false,
+			italic = true,
+			transparency = true,
 		},
 
 		groups = {
@@ -58,7 +58,6 @@ function M.config()
 	vim.cmd("colorscheme rose-pine")
 	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-	vim.api.nvim_set_hl(0, "Visual", { bg = "none" })
 end
 
 return M
