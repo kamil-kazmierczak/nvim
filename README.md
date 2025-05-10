@@ -2,4 +2,5 @@ Based on chris@machine (LunarVim founder) tutorial: https://www.youtube.com/watc
 
 How to run this config?
   -  Install Neovim
-  -  clone this repo to ~/.config/ catalog
+  -  Clone this repo to ~/.config/
+  -  Run nvim
