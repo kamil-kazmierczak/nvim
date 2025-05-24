@@ -6,7 +6,7 @@ vim.o.wrap = false
 vim.o.scrolloff = 8
 -- Make line numbers default
 vim.wo.number = true
-vim.wo.relativenumber = true
+vim.wo.relativenumber = false
 
 -- Enable break indent
 vim.o.smartindent = true
@@ -31,11 +31,6 @@ vim.o.completeopt = 'menuone,noselect'
 -- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
 
-vim.o.shiftwidth = 4
-vim.o.tabstop = 4
+vim.o.shiftwidth = 2
+vim.o.tabstop = 2
 vim.opt.swapfile = false
-
-
--- For using Nvim tree
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
